@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Generates comments from
+Generates tweets from Facebook page comment sections.
 
 :Author:     Maded Batara III
-:Version:    v1.0dev (Date)
+:Version:    v1.0.3 (2016-06-17)
 """
 import facebook
 import markovify
@@ -45,3 +45,4 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN_TWITTER, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 api.update_status(model.make_short_sentence(140))
+#print(model.make_short_sentence(140))
