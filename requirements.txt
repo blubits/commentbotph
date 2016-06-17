@@ -1,0 +1,4 @@
+facebook-sdk
+tweepy
+unidecode
+markovify==0.3.2
