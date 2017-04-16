@@ -4,22 +4,17 @@ Ang mga opinyon ng isang bot, mula sa comment sections ng bias na media.
 
 ## What?
 
-In more technical terms, it's a Twitter bot that generates (usually) nonsensical tweets based on comments from the following Facebook pages:
-
-* GMA News
-* ABS-CBN News
-* Rappler
-* InterAksyon
+In more technical terms, it's a Twitter bot that generates (usually) nonsensical tweets based on popular Philippine bloggers and news pages. You'll notice that some tweets have a pro-administration slant: that's just the nature of the Facebook comment section these days.
 
 The bot uses a Markov chain to generate tweets.
 
 ## Setup
 
 This project requires the following modules:
-* `markovify`
 * `facebook-sdk` >= 3.0.0
-* `tweepy`
+* `markovify`
 * `requests`
+* `tweepy`
 
 The main program is in `combot.py`. It's missing a few variables that should be defined in a `key.py` file, detailed below:
 * `FB_SDK_VERSION` - Facebook SDK version to use. v2.7 recommended.

@@ -3,7 +3,7 @@
 Generates tweets from Facebook page comment sections.
 
 :Author:     Maded Batara III
-:Version:    v2.0 (2017-04-16)
+:Version:    v2.0
 """
 import facebook
 import markovify
@@ -17,12 +17,14 @@ from keys import *
 # Pages to be checked
 pages = [
     ## NEWS ##
-    "116724526976",     # GMA News
-    "27254475167",      # ABS-CBN News
-    "310621318958658",  # Rappler
-    "142802334452",     # Inquirer.net
-    "232388115712",     # philstar.com
-    "319779186521"      # MOCHA USON BLOG
+    "116724526976",         # GMA News
+    "27254475167",          # ABS-CBN News
+    "310621318958658",      # Rappler
+    "142802334452",         # Inquirer.net
+    "232388115712",         # philstar.com
+    "1515763818663512",     # CNN Philippines
+    "319779186521",         # MOCHA USON BLOG
+    "29496919420206"        # Sass Sasot
 ]
 
 FB_ACCESS_TOKEN = requests.get(
@@ -56,8 +58,8 @@ random.shuffle(comments)
 model = markovify.NewlineText('\n'.join(comments))
 
 # Step 3. Tweet!
-#auth = tweepy.OAuthHandler(TW_CONSUMER_KEY, TW_CONSUMER_SECRET)
-#auth.set_access_token(TW_ACCESS_TOKEN, TW_ACCESS_TOKEN_SECRET)
-#api = tweepy.API(auth)
-#api.update_status(model.make_short_sentence(140))
-print(model.make_short_sentence(140))
+auth = tweepy.OAuthHandler(TW_CONSUMER_KEY, TW_CONSUMER_SECRET)
+auth.set_access_token(TW_ACCESS_TOKEN, TW_ACCESS_TOKEN_SECRET)
+api = tweepy.API(auth)
+api.update_status(model.make_short_sentence(140))
+# print(model.make_short_sentence(140)) # Debugging
