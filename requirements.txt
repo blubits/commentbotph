@@ -1,4 +1,4 @@
-facebook-sdk
+-e git+https://github.com/mobolic/facebook-sdk.git#egg=facebook-sdk
 tweepy
-unidecode
-markovify==0.3.2
+markovify
+requests

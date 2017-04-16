@@ -16,14 +16,16 @@ The bot uses a Markov chain to generate tweets.
 ## Setup
 
 This project requires the following modules:
-* `markovify` >= 0.3.2
-* `facebook-sdk`
+* `markovify`
+* `facebook-sdk` >= 3.0.0
 * `tweepy`
+* `requests`
 
 The main program is in `combot.py`. It's missing a few variables that should be defined in a `key.py` file, detailed below:
-* `ACCESS_TOKEN_FACEBOOK` - App access token from Facebook.
-* `CONSUMER_xxx` - Consumer `KEY`/`SECRET` from Twitter.
-* `ACCESS_TOKEN_xxx` - Access token key (`TWITTER`)/`SECRET` from Twitter.
+* `FB_SDK_VERSION` - Facebook SDK version to use. v2.7 recommended.
+* `FB_APP_xxx` - Your Facebook app's `ID` and `SECRET`.
+* `TW_CONSUMER_xxx` - Consumer `KEY` and `SECRET` from Twitter.
+* `TW_ACCESS_TOKEN_xxx` - Access token key and `SECRET` from Twitter.
 
 Consult Twitter's and Facebook's docs for more info.
 
